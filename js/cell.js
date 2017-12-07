@@ -33,6 +33,23 @@ Cell.prototype.show = function() {
   }
 }
 
+//
+// for (var xoff = -1; xoff <= 1; xoff++) {
+//   var i = this.i + xoff;
+//   if ( i < 0 && i >= cols) {
+//
+//   for (var yoff = -1; yoff <= 1; yoff++) {
+//     var j = this.j + yoff;
+//     if ( j < 0 && j >= rows) {
+//       var neighbor = grid[i][j];
+//
+//         if (neighbor.bee) {
+//           total++;
+//         }
+//       }
+//     }
+//   }
+// }
 Cell.prototype.countBees = function() {
   if (this.bee) {
     this.neighborCount = -1;
@@ -46,13 +63,13 @@ Cell.prototype.countBees = function() {
       var j = this.j + yoff;
       if ( i > 0 && i < cols && j > 0 && j < rows) {
         var neighbor = grid[i][j];
-      }
-      if (neighbor.bee) {  //if neighbor has bee add to total
-        total++;
+
+        if (neighbor.bee) {
+          total++;
+        }
       }
     }
   }
-  console.log(total);
   this.neighborCount =total;
 }
 

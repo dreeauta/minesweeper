@@ -55,6 +55,14 @@ function setup() {
   }
 }
 
+function gameOver() {
+  for (var i = 0; i<cols; i++){
+    for (var j = 0; j< rows; j++){
+      grid[i][j].revealed = true;
+    }
+  }
+}
+
 function mousePressed() {
   for (var i = 0; i < cols; i++){
     for (var j = 0; j < rows; j++) {
