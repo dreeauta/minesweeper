@@ -23,7 +23,12 @@ function setup() {
   grid = make2DArray(20,20);
   for (var i = 0; i <cols; i++){
     for (var j = 0; j < rows; j++){
-      grid[i][j] = new Cell(i*w, j*w, w);  //expand i and j by width number of pixels
+      grid[i][j] = new Cell(i, j, w);  //expand i and j by width number of pixels
+    }
+  }
+  for (var i = 0; i < cols; i++) {
+    for (var j = 0; j < rows; j++){
+      grid[i][j].countBees;
     }
   }
 }
